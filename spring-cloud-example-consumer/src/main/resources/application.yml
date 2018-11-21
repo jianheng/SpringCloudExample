@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: consumer
+server:
+  port: 8000
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+#      defaultZone: http://eureka-server-1:8761/eureka/, http://eureka-server-2:8762/eureka/
+      defaultZone: http://eureka-server-1:8761/eureka/
+    healthcheck:
+      enabled: true
+    lease-expiration-duration-in-seconds: 10
+    lease-renewal-interval-in-seconds: 3
+eureka-client:
+  ribbon:
+    eureka:
+      enabled: true
+    ServerListRefreshInterval: 15000
+logging:
+  level:
+    root: DEBUG
