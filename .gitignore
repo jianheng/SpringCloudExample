@@ -1,0 +1,5 @@
+.idea
+fat-build
+*.iml
+*/target
+*/*.iml
